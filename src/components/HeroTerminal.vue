@@ -39,12 +39,12 @@
 
 <style lang="scss" scoped>
 .terminal-wrapper {
-  width: 450px;
+  width: 540px;
   border-radius: 10px;
 }
 
 .terminal-spacer {
-  background: #191724;
+  background: $terminal-bg;
   border-color: #000;
   border-radius: 10px;
 }
@@ -78,7 +78,8 @@
 }
 
 .terminal-content {
-  font-family: 'Fira Sans', sans-serif;
+  font-family: 'Ubuntu Mono', monospace;
+  height: 300px;
   color: $default-color;
   font-weight: 300;
   padding: 12px 14px;
@@ -87,7 +88,7 @@
   .terminal-line {
     font-family: var(--font-mono);
     line-height: 1.5;
-    font-size: 14px;
+    font-size: 18px;
     white-space: pre-wrap;
     word-break: break-all;
   }
