@@ -1,5 +1,8 @@
 <script setup lang="ts">
-defineProps({
+import { computed } from 'vue';
+
+
+const props = defineProps({
     title: {
         type: String,
         required: true
@@ -11,13 +14,23 @@ defineProps({
     target: {
         type: String,
         default: '_self'
+    },
+    underline: {
+        type: Boolean,
+        default: true
     }
+})
+
+const emit = defineEmits(['click'])
+
+const computeClass = computed(() => {
+    return `simple-link ${props.underline ? 'underline' : ''}`
 })
 </script>
         
 <template>
-    <span>
-        <a :href="url" :target="target" class="simple-link">
+    <span @click="emit('click')">
+        <a :href="url" :target="target" :class="computeClass">
             {{ title }}
         </a>
     </span>
@@ -27,5 +40,10 @@ defineProps({
 <style lang="scss" scoped>
 .simple-link {
     color: lightcoral;
+    text-decoration: none;
+}
+
+.underline {
+    text-decoration: underline;
 }
 </style>

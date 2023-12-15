@@ -40,10 +40,16 @@ defineProps({
     font-weight: 500;
     height: 43px;
     color: #000;
+    transition: all 0.2s ease;
 
     .icon {
         margin-right: 5px;
         display: flex;
+    }
+
+    &:hover {
+        background-color: $default-bg;
+        color: #fff;
     }
 }
 </style>

@@ -3,8 +3,9 @@ import AppHero from '@/components/AppHero.vue'
 import CustomButton from '@/components/common/CustomButton.vue';
 import SimpleLink from '@/components/common/SimpleLink.vue';
 import HeroTerminal from '@/components/HeroTerminal.vue'
-import { computed } from 'vue';
+import { computed, ref } from 'vue';
 
+const showOtherPlatforms = ref(false);
 const currentOS = computed(() => {
   let platform = null;
   if (navigator.userAgent.indexOf('Win') != -1) platform = 'windows';
@@ -19,7 +20,6 @@ const currentOS = computed(() => {
   <main>
     <AppHero />
     <HeroTerminal />
-
     <div class="mt-4 d-flex align-items-center justify-content-center">
       <CustomButton v-if="currentOS === 'windows'" title="Download for Windows" :is-svg="true">
         <template #icon>
@@ -38,8 +38,69 @@ const currentOS = computed(() => {
       </CustomButton>
       <CustomButton v-else title="Download" icon="download" />
     </div>
-    <div class="mt-1 d-flex align-items-center justify-content-center">
-      <SimpleLink title="Other platfoms" />
+    <div class="mt-3 d-flex align-items-center justify-content-center">
+      <SimpleLink title="Other platfoms" @click="showOtherPlatforms = !showOtherPlatforms" />
+    </div>
+    <div v-if="showOtherPlatforms" class="mt-4 d-flex align-items-center justify-content-center">
+      <table class="table w-75 text-center">
+        <caption>Other platforms binaries</caption>
+        <thead>
+          <tr>
+            <th scope="col">Platform</th>
+            <th scope="col">Download</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Windows</td>
+            <td>
+              <SimpleLink title="version-0.1.0-win-x64.zip"
+                url="https://github.com/ebenjs/gpt-shell/archive/refs/tags/version-0.1.0.zip" />
+            </td>
+          </tr>
+          <tr>
+            <td>Linux</td>
+            <td>
+              <SimpleLink title="version-0.1.0.zip for Linux"
+                url="https://github.com/ebenjs/gpt-shell/archive/refs/tags/version-0.1.0.zip" />
+            </td>
+          </tr>
+          <tr>
+            <td>Mac</td>
+            <td>
+              <SimpleLink title="version-0.1.0.zip for Mac"
+                url="https://github.com/ebenjs/gpt-shell/archive/refs/tags/version-0.1.0.zip" />
+            </td>
+          </tr>
+        </tbody>
+      </table>
     </div>
   </main>
 </template>
+
+<style lang="scss" scoped>
+.table {
+  border-radius: 100px;
+  border: 1px solid $terminal-bg;
+
+  th {
+    background-color: $terminal-bg;
+    color: #fff;
+  }
+
+  td,
+  tr {
+    color: #fff;
+    background-color: transparent;
+
+    &:hover {
+      background-color: $terminal-bg;
+    }
+  }
+
+  caption {
+    color: $default-color-grey;
+    text-align: center;
+  }
+}
+</style>

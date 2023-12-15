@@ -27,11 +27,16 @@
 
 <style lang="scss" scoped>
 .header {
+  @include light-border;
   height: 65px;
-  border-bottom: solid 0.5px rgb(39, 39, 39);
   display: flex;
   align-items: center;
   justify-content: center;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  background-color: $default-bg;
 
   .header-nav {
     margin: auto;
