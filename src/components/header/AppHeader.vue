@@ -8,11 +8,13 @@
     </div>
     <div class="col-lg-6">
       <nav class="header-nav">
-        <a class="header-nav-link" href="/plugins">Documentation</a>
+        <router-link to="/" class="header-nav-link">Homepage</router-link>
+        <router-link to="/documentation" class="header-nav-link">Documentation</router-link>
+        <router-link to="/download" class="header-nav-link">Download</router-link>
         <a target="_blank" rel="noopener noreferrer" href="https://github.com/ebenjs/gpt-shell"
           class="header-nav-link">GitHub</a>
-        <a class="header-nav-link" href="/#installation">Download</a><a class="header-nav-link" href="/blog">Blog</a>
-        <a class="header-nav-link" href="/themes">Donate</a>
+        <router-link to="/blog" class="header-nav-link">Blog</router-link>
+        <router-link to="/support" class="header-nav-link">Support us</router-link>
       </nav>
     </div>
     <div class="col-lg-2 d-flex justify-content-end">
@@ -27,7 +29,7 @@
 
 <style lang="scss" scoped>
 .header {
-  @include light-border;
+  @include light-border-bottom;
   height: 65px;
   display: flex;
   align-items: center;

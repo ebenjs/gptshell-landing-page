@@ -13,3 +13,11 @@ body {
   -moz-osx-font-smoothing: grayscale;
   padding-top: 65px;
 }
+
+.default-border-bottom {
+  @include light-border-bottom;
+}
+
+.default-border-top {
+  @include light-border-top;
+}

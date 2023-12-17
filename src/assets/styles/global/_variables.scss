@@ -1,3 +1,7 @@
-@mixin light-border {
+@mixin light-border-bottom {
     border-bottom: solid 0.5px rgb(39, 39, 39);
+}
+
+@mixin light-border-top {
+    border-top: solid 0.5px rgb(39, 39, 39);
 }

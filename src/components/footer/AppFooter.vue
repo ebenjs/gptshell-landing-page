@@ -30,7 +30,7 @@ import SimpleLink from '../common/SimpleLink.vue'
 
 <style lang="scss" scoped>
 .footer {
-    @include light-border;
+    @include light-border-top;
     background-color: $default-bg;
     color: $default-color-grey;
     border-top: solid 0.5px rgb(39, 39, 39);
