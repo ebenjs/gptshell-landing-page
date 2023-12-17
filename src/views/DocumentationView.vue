@@ -1,5 +1,4 @@
 <script setup lang="ts">
-import { formatCode } from '../utilities/format-code.js';
 import SimpleLink from '@/components/common/SimpleLink.vue';
 
 </script>
