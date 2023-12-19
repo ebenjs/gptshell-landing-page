@@ -4,7 +4,7 @@ import CustomButton from '@/components/common/CustomButton.vue';
 import SimpleLink from '@/components/common/SimpleLink.vue';
 import HeroTerminal from '@/components/HeroTerminal.vue'
 import { computed, ref } from 'vue';
-import { SpeedInsights } from "@vercel/speed-insights/next"
+import { SpeedInsights } from "@vercel/speed-insights/vue"
 
 const showOtherPlatforms = ref(false);
 const currentOS = computed(() => {
