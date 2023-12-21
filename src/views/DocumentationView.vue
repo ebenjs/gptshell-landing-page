@@ -19,7 +19,7 @@ import SimpleLink from '@/components/common/SimpleLink.vue';
             gpt-shell via the command line with the following scripts:
         </p>
 
-        <h5 class="mt-4">Automatic install on debian based distros</h5>
+        <h5 class="mt-4" id="download-linux">Automatic install on debian based distros</h5>
 
         <div class="code-wrapper mt-3">
             <code>curl -s https://raw.githubusercontent.com/ebenjs/gpt-shell/develop/install-scripts/install-script-deb.sh | sudo bash</code>
@@ -27,7 +27,7 @@ import SimpleLink from '@/components/common/SimpleLink.vue';
 
         <h5 class="mt-4">Manual install from sources</h5>
 
-        <h6 class="mt-4">Common steps for all platforms</h6>
+        <h6 class="mt-4" id="download-all">Common steps for all platforms</h6>
         <div class="code-wrapper mt-3">
             <code>git clone https://github.com/ebenjs/gpt-shell.git</code>
             <br />
