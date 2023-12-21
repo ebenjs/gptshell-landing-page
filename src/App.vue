@@ -5,7 +5,7 @@ import AppFooter from './components/footer/AppFooter.vue';
 </script>
 
 <template>
-  <div class="container-fluid">
+  <div class="container-fluid h-100">
     <div class="row">
       <div class="col">
         <header>
@@ -13,10 +13,10 @@ import AppFooter from './components/footer/AppFooter.vue';
         </header>
       </div>
     </div>
-    <div class="row">
-      <div class="col">
-        <main>
-          <div class="container">
+    <div class="row body-content">
+      <div class="col h-100">
+        <main class="h-100">
+          <div class="container h-100">
             <RouterView />
           </div>
         </main>
@@ -37,5 +37,10 @@ import AppFooter from './components/footer/AppFooter.vue';
   max-width: 900px;
   margin-left: auto;
   margin-right: auto;
+
+}
+
+.body-content {
+  min-height: calc(100% - 100px);
 }
 </style>
