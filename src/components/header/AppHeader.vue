@@ -10,7 +10,7 @@
       <nav class="header-nav">
         <router-link to="/" class="header-nav-link">Homepage</router-link>
         <router-link to="/documentation" class="header-nav-link">Documentation</router-link>
-        <router-link to="/download" class="header-nav-link">Download</router-link>
+        <a href="/#download-section" class="header-nav-link">Download</a>
         <a target="_blank" rel="noopener noreferrer" href="https://github.com/ebenjs/gpt-shell"
           class="header-nav-link">GitHub</a>
         <router-link to="/blog" class="header-nav-link">Blog</router-link>

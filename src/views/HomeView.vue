@@ -22,7 +22,7 @@ const currentOS = computed(() => {
   <main>
     <AppHero />
     <HeroTerminal />
-    <div class="mt-4 d-flex align-items-center justify-content-center">
+    <div class="mt-4 d-flex align-items-center justify-content-center" id="download-section">
       <CustomButton v-if="currentOS === 'windows'" title="Download for Windows" :is-svg="true">
         <template #icon>
           <img src="/images/microsoft-windows-11.svg" height="20" alt="windows" />
@@ -40,9 +40,9 @@ const currentOS = computed(() => {
       </CustomButton>
       <CustomButton v-else title="Download" icon="download" />
     </div>
-    <div class="mt-3 d-flex align-items-center justify-content-center">
+    <!-- <div class="mt-3 d-flex align-items-center justify-content-center">
       <SimpleLink title="Other platfoms" @click="showOtherPlatforms = !showOtherPlatforms" />
-    </div>
+    </div> -->
     <div v-if="showOtherPlatforms" class="mt-4 d-flex align-items-center justify-content-center">
       <table class="table w-75 text-center">
         <caption>Other platforms binaries</caption>
